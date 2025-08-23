@@ -1,0 +1,326 @@
+/* font-family: 'Tangerine'
+font-family: 'DM Mono' */
+
+/* Normalización: (reseteo de algunas características para no usar las default del navegador*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* El padding y border no afectan el ancho y alto del elemento */
+    font-family: 'Inconsolata', monospace;
+    list-style: none;
+    /* Saca los puntos y decoraciones de las listas*/
+    text-decoration: none;
+    /* Quita el subrayado de los enlaces*/
+    color: white;
+}
+
+body {
+    background-color: black;
+    /* TODO: Borrar cuando esté el fondo final */
+}
+
+header {
+    position: fixed;
+    /*El header queda fijo en el margen superior */
+    right: 0;
+    top: 0;
+    z-index: 100;
+    /* Valor alto para que el header que por encima de cualquier otra cosa */
+    width: 100%;
+    display: flex;
+    /* Para que los elementos se vean en línea */
+    align-items: center;
+    /* Centra verticalmente gracias al flex */
+    justify-content: space-between;
+    /* Separa los elementos */
+    padding: 15px 3%;
+    /* Eje vertical y horizontal en orden */
+    background-color: transparent;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 800;
+    /* Grosor de las letras */
+}
+
+.navlist {
+    display: flex;
+    /* Los elementos quedan en línea */
+}
+
+.navlist a {
+    /* Se trabaja en los "a" (links) de los navlist */
+    margin-left: 60px;
+    /* Para separar cada link del otro */
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    /* Subrayado transparente */
+    transition: all .5s ease 0s;
+    /* Cada cambio de característica va a ser una transición de medio segundo de duración y sin delay */
+}
+
+.navlist a:hover {
+    /* hover hace cambio cuando se pasa el mouse por encima */
+    border-bottom: 2px solid white;
+    /* El subrayado blanco aparecerá al pasar el mouse por encima */
+}
+
+#menu-icon {
+    display: none;
+    /*  Solo quiero que aparezca con la página colapsada (en el celular) */
+}
+
+#menu-icon {
+    font-size: 35px;
+    z-index: 101;
+    /* Para que esté por encima de la barra del header */
+    cursor: pointer;
+    /* Para que el mouse se vuelva una mano al ponerlo sobre el menú-icon */
+}
+
+#menu-toggle {
+    display: none;
+    /* Para que no se vea el checkbox */
+}
+
+.menu-icon-action {
+    display: none;
+    /* Para que no sea clickeable */
+}
+
+.hero {
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    /* La altura mínima va a ser todo el alto visible de la pantalla */
+    background: linear-gradient(245.59deg, rgb(2, 20, 1) 0%, rgb(7, 71, 7) 45%, rgb(8, 81, 8) 75%);
+    /* Hace el fondo en gradiente; 245.59 es el angulo del degrade */
+    position: relative;
+    /* Posicion relativa al contenedor */
+    display: grid;
+    /* Para dividir al Hero en 2 columnas */
+    grid-template-columns: 1fr 1fr;
+    /* ambas columnas tienen el mismo ancho */
+    align-items: center;
+    /* alinear verticalmente */
+    gap: 2rem;
+    /* Espacio de 2rem entre ambas columnas */
+}
+
+section {
+    padding: 0 8%;
+}
+
+.hero-text h5 {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.hero-text h1 {
+    font-family: 'Tangerine', monospace;
+    font-size: 80px;
+    line-height: 1;
+    margin: 0 0 30px;
+}
+
+.hero-text h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 80%;
+    /* 80% del contenedor padre */
+    margin-bottom: 40px;
+    line-height: 1.9;
+
+}
+
+.hero-img img {
+    width: 95%;
+    border-radius: 50%;
+    clip-path: polygon(40% 0%, 90% 00%, 70% 75%, 50% 100%, 10% 85%);
+    text-align: left;
+}
+
+.borde-img {
+    background-color: brown;
+    color: transparent;
+    width: 425px;
+    height: auto;
+    border-radius: 50%;
+    clip-path: polygon(40% 0%, 90% 00%, 70% 75%, 50% 100%, 10% 85%);
+    margin: 10% 0 0 10%;
+    transition: all 5s linear;
+    /* Hace a la transicion lineal */
+}
+
+.borde-img:hover {
+    width: 460px;
+    opacity: 0.7;
+}
+
+.hero-text a {
+    display: inline-block;
+    /* inline pero permite dar ancho y alto */
+    background-color: rgb(3, 30, 1);
+    border: 1px solid transparent;
+    padding: 15px;
+    line-height: 1.4;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: all .5s ease;
+}
+
+.hero-text a:hover {
+    background-color: transparent;
+    border: 1px solid white;
+    transform: translateX(8px);
+    /* Se va a mover 8px hacia la derecha */
+}
+
+.hero-text a.proyectos {
+    background-color: transparent;
+    border: 1px solid white;
+    margin-left: 20px;
+}
+
+.hero-text a.proyectos i {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.icons {
+    position: absolute;
+    top: 50vh;
+    padding: 0 3%;
+    transform: translateY(-50%);
+}
+
+.icons i {
+    display: block;
+    /* Quedan ordenados verticalmente */
+    margin: 26px 0;
+    font-size: 24px;
+    transition: all 0.5s ease;
+
+}
+
+.icons i:hover {
+    color: #555854;
+    transform: translateY(-5px);
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 6%;
+    right: 3%;
+}
+
+.scroll-down i {
+    display: block;
+    padding: 12px;
+    font-size: 25px;
+    background-color: #263d21;
+    border-radius: 30px;
+    transition: all .5s ease;
+}
+
+.scroll-down i:hover {
+    transform: translateY(-5px);
+}
+
+/* Media queries para que la web sea responsive en tablet */
+@media (max-width:992px) {
+
+    /* Cuando el tamaño de pantalla sea menor a 992px, se tomaran las configuraciones de aca */
+    section {
+        padding: 0 3%;
+        transition: .2s;
+    }
+
+    .hero-text {
+        padding-top: 0;
+    }
+
+    .borde-img {
+        text-align: center;
+        width: 90%;
+        margin: 10% 0 0 10%;
+    }
+
+    .hero-text p {
+        font-size: 70%;
+    }
+
+    .icons {
+        display: none;
+        /* Sacar los iconos si la pantalla es muy angosta */
+    }
+
+    .scroll-down {
+        display: none;
+    }
+
+}
+
+/* Ahora para uso en celular */
+@media (max-width:600px) {
+
+    /* Tiene que aparecer el botón de menú solo en celular */
+    .menu-icon-action {
+        display: block;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    .hero-text {
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    .borde-img{
+        margin: 0;
+    }
+
+    .hero{
+        height: 100%;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+
+    .navlist{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 150px;
+        height: 180px;
+        background-color: #042204ef;
+        
+        /* Para que se vea como columna */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 20px;
+        transition: all 1s ease;
+    }
+
+    .navlist a{
+        display: block;
+        margin: 7px 0;
+    }
+
+    /* Toda esta combinacion es para seleccionar el ul hermano */
+    #menu-toggle:checked + label.menu-icon-action + ul{
+        right: 0;
+    }
+}
