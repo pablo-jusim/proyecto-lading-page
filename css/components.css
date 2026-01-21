@@ -1,0 +1,134 @@
+/* =====================================================
+   Componentes reutilizables
+===================================================== */
+
+/* =====================================================
+   Formación académica – layout con logo
+===================================================== */
+.education-list {
+    display: grid;
+    gap: 999px;
+}
+
+.education-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+/* Texto a la derecha del logo */
+.education-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+/* Institución */
+.education-institution {
+    font-size: 95%;
+    font-weight: 600;
+}
+
+/* Título */
+.education-degree {
+    font-size: 85%;
+    color: #cfcfcf;
+}
+
+.about ul.education-list {
+    display: grid;
+    gap: 36px;
+    padding-left: 0;
+}
+
+/* =====================================================
+   Botones / CTAs
+===================================================== */
+.btn {
+    display: inline-block;
+
+    padding: 15px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+
+    border-radius: 30px;
+    border: 1px solid transparent;
+
+    background-color: rgb(3, 30, 1);
+    text-transform: uppercase;
+
+    transition: all 0.5s ease;
+}
+
+.btn:hover {
+    background-color: transparent;
+    border: 1px solid white;
+    transform: translateX(8px);
+}
+
+/* Variante secundaria */
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+/* Icono dentro de botón */
+.btn i {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/* =====================================================
+   Íconos sociales
+===================================================== */
+.icons {
+    position: absolute;
+    top: 50vh;
+    padding: 0 3%;
+    transform: translateY(-50%);
+}
+
+.icons i {
+    display: block;
+    margin: 26px 0;
+    font-size: 24px;
+
+    transition: all 0.5s ease;
+}
+
+.icons i:hover {
+    color: #555854;
+    transform: translateY(-5px);
+}
+
+/* =====================================================
+   Indicador de scroll
+===================================================== */
+.scroll-indicator {
+    position: absolute;
+    bottom: 6%;
+    right: 3%;
+}
+
+.scroll-indicator i {
+    display: block;
+    padding: 12px;
+    font-size: 25px;
+
+    background-color: #263d21;
+    border-radius: 30px;
+
+    transition: all 0.5s ease;
+}
+
+.scroll-indicator i:hover {
+    transform: translateY(-5px);
+}
+
+/* =====================================================
+   Utilidades
+===================================================== */
+.text-center {
+    text-align: center;
+}

@@ -1,0 +1,142 @@
+/* =====================================================
+   Responsive styles
+   Adaptación a tablet y mobile
+===================================================== */
+
+/* =====================================================
+   Tablet
+===================================================== */
+@media (max-width: 992px) {
+
+    section {
+        padding: 0 3%;
+    }
+
+    /* Hero */
+    .hero {
+        gap: 1.5rem;
+    }
+
+    .hero-text p {
+        font-size: 70%;
+    }
+
+    .borde-img {
+        width: 90%;
+        margin: 10% 0 0 10%;
+    }
+
+    /* Ocultar elementos secundarios */
+    .icons,
+    .scroll-down {
+        display: none;
+    }
+}
+
+/* =====================================================
+   Mobile
+===================================================== */
+@media (max-width: 600px) {
+
+    /* Mostrar menú hamburguesa */
+    .menu-icon-action,
+    #menu-icon {
+        display: block;
+    }
+
+    /* Hero */
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .hero-text {
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    .hero-text h1 {
+        font-size: 64px;
+    }
+
+    .borde-img {
+        margin: 0 auto;
+    }
+
+    /* Navegación mobile */
+    .navlist {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+
+        width: 160px;
+        height: auto;
+
+        background-color: #042204ef;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding: 30px 20px;
+        transition: all 1s ease;
+    }
+
+    .navlist a {
+        margin: 7px 0;
+        display: block;
+    }
+
+    /* Mostrar menú cuando el checkbox está activo */
+    #menu-toggle:checked + label.menu-icon-action + ul {
+        right: 0;
+    }
+
+    /* About */
+    .about {
+        padding: 80px 5%;
+    }
+
+    .about-intro h2 {
+        font-size: 30px;
+    }
+
+    .about h3 {
+        font-size: 20px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .education-item {
+        align-items: flex-start;
+    }
+        .technologies {
+        padding: 80px 5%;
+    }
+
+    .tech-logos {
+        gap: 20px;
+    }
+
+    .tech-item img {
+        width: 42px;
+        height: 42px;
+    }
+
+    .technologies-container {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+}
+
+@media (max-width: 900px) {
+    .portfolio-container {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .portfolio {
+        padding: 80px 5%;
+    }
+}

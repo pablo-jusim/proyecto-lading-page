@@ -2,82 +2,464 @@
 <html lang="en">
 
 <head>
+    <!-- =====================================================
+         Metadata básica
+    ====================================================== -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Título de la web -->
+
     <title>Pablo Jusim web</title>
-    <!-- Importación de del archivo css de estilo -->
-    <link rel="stylesheet" href="style.css">
 
-    <!-- Importar archivos de íconos -->
-    <!-- Boxicons -->
+    <!-- =====================================================
+         Estilos
+    ====================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Librerías de íconos -->
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    <!-- Remixicon -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
 
-    <!-- Fuentes de Google fonts -->
+    <!-- Tipografías -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inconsolata:wght@200..900&family=Tangerine:wght@400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Inconsolata:wght@200..900&family=Tangerine:wght@400;700&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- Cabecera de la página web, con logo y barra de navegación -->
+    <!-- =====================================================
+         Header / Navegación principal
+    ====================================================== -->
     <header>
-        <!-- Logo -->
         <a href="#" class="logo">PABLO JUSIM</a>
 
-        <!-- Truco para que el boton sea clickeable sin usar JS
-         Si el checkbox  está chequeado, se verá el menú (colo funcionará en celular)-->
-        <input type="checkbox" name="checkbox" id="menu-toggle">
+        <input type="checkbox" id="menu-toggle">
+
         <label for="menu-toggle" class="menu-icon-action">
-        <!-- Ícono de menú de 3 rayas paralelas -->
-        <div class='bx  bx-menu' id="menu-icon"></div>
+            <div class="bx bx-menu" id="menu-icon"></div>
         </label>
 
         <ul class="navlist">
             <li><a href="#">Home</a></li>
-            <li><a href="#">Sobre mí</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#tecnologias">Tecnologías</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contacto">Contacto</a></li>
         </ul>
     </header>
 
-        <!-- HERO section. Es una parte destacada de la web que llama la atención-->
+    <!-- =====================================================
+         Hero Section
+    ====================================================== -->
+    <section class="hero">
 
-        <section class="hero">
-            <div class="hero-text">
-                <h5>Biólogo</h5>
-                <h4>Científico de datos</h4>
-                <h1>Pablo Jusim</h1>
-                <p>Análisis de datos personalizados.<br>
-                Aprendamos Python y organicemos tus datos</p>
-                <a href="#">CV</a>
-                <a href="#" class="proyectos"><i class="ri-github-fill"></i>Mirá mis proyectos</a>
+        <div class="hero-text">
+            <h5>Biólogo</h5>
+            <h4>Científico de datos</h4>
+            <h1>Pablo Jusim</h1>
+
+            <p>
+                Análisis de datos personalizados.<br>
+                Aprendamos Python y organicemos tus datos
+            </p>
+
+            <a href="#sobre-mi">CV</a>
+            <a href="#" class="proyectos">
+                <i class="ri-github-fill"></i>
+                Mirá mis proyectos
+            </a>
+        </div>
+
+        <div class="borde-img">
+            <div class="hero-img">
+                <img src="/assets/imgs/foto 3.jpg" alt="Pablo Jusim foto">
             </div>
+        </div>
 
-            <div class="borde-img">ssss
-                <div class="hero-img">
-                    <img src="/assets/imgs/foto 3.jpg" alt="Pablo Jusim foto">
-                </div>
-            </div>
-            
-        </section>
-
+        <!-- Redes sociales -->
         <div class="icons">
-            <a href="#"><i class="ri-linkedin-box-fill"></i></a>
-            <a href="#"><i class="ri-github-fill"></i></a>
+            <a href="https://www.linkedin.com/in/pablo-jusim-84596051">
+                <i class="ri-linkedin-box-fill"></i>
+            </a>
+            <a href="https://github.com/pablo-jusim">
+                <i class="ri-github-fill"></i>
+            </a>
         </div>
 
+        <!-- Indicador de scroll -->
         <div class="scroll-down">
-            <a href="#"><i class="ri-arrow-down-s-fill"></i></a>
+            <a href="#sobre-mi">
+                <i class="ri-arrow-down-s-fill"></i>
+            </a>
         </div>
+
+    </section>
+
+    <!-- =====================================================
+         Sobre mí
+    ====================================================== -->
+    <section class="about" id="sobre-mi">
+        <div class="about-container">
+
+            <div class="about-intro">
+                <h2>Sobre mí</h2>
+                <p>
+                    Me interesa entender problemas complejos y transformarlos en soluciones basadas en datos y
+                    tecnología. Mi recorrido combina ciencia, análisis y un interés creciente por la programación
+                    aplicada, especialmente en el área de ciencia de datos e inteligencia artificial.
+                </p>
+                <p>
+                    Mi camino comenzó con una formación en biología, donde aprendí a trabajar con datos reales, a
+                    formular preguntas con rigor y a sostener procesos largos y estructurados.
+                </p>
+                <p>
+                    Actualmente desarrollo proyectos personales orientados al análisis y visualización de datos,
+                    trabajando principalmente con Python, además de SQL y R, e incorporando Node.js para desarrollo web.
+                </p>
+            </div>
+
+            <div class="about-profile">
+                <h3>Perfil profesional</h3>
+                <p>
+                    Trabajo en el análisis, limpieza y visualización de datos, combinando pensamiento científico con
+                    herramientas de programación.
+                </p>
+                <p>
+                    Me interesa especialmente la intersección entre ciencia de datos, investigación y desarrollo de
+                    software.
+                </p>
+            </div>
+
+            <div class="about-skills">
+                <h3>Habilidades técnicas</h3>
+                <ul>
+                    <li>Python (pandas, numpy, matplotlib)</li>
+                    <li>Análisis y limpieza de datos</li>
+                    <li>SQL</li>
+                    <li>Visualización de datos</li>
+                    <li>HTML y CSS</li>
+                    <li>Git</li>
+                </ul>
+            </div>
+
+            <div class="about-education">
+                <h3>Formación académica</h3>
+                <ul class="education-list">
+
+                    <li class="education-item">
+                        <div class="logo-wrapper uba">
+                            <img src="assets/logos/uba.png" alt="Universidad de Buenos Aires">
+                        </div>
+                        <div class="education-text">
+                            <span class="education-institution">
+                                Universidad de Buenos Aires
+                            </span>
+                            <span class="education-degree">
+                                Licenciatura y Doctorado en Ciencias Biológicas
+                            </span>
+                        </div>
+                    </li>
+
+                    <li class="education-item">
+                        <div class="logo-wrapper politecnico">
+                            <img src="assets/logos/politecnico.png" alt="Politécnico Superior Malvinas Argentinas">
+                        </div>
+                        <div class="education-text">
+                            <span class="education-institution">
+                                Politécnico Superior Malvinas Argentinas
+                            </span>
+                            <span class="education-degree">
+                                Tecnicatura en Ciencia de Datos e IA
+                            </span>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- =====================================================
+         Tecnologías
+    ====================================================== -->
+    <section class="technologies" id="tecnologias">
+        <div class="technologies-container">
+
+            <div class="technologies-intro">
+                <h2>Tecnologías</h2>
+                <p>
+                    Herramientas y lenguajes que utilizo habitualmente para análisis de datos, desarrollo y
+                    visualización.
+                </p>
+            </div>
+
+            <div class="tech-group">
+                <h3>Análisis de datos</h3>
+
+                <div class="tech-logos">
+                    <div class="tech-item">
+                        <img src="assets/logos/python.svg" alt="Python">
+                        <span>Python</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="assets/logos/r.svg" alt="R">
+                        <span>R</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="assets/logos/jupyter.svg" alt="Jupyter">
+                        <span>Jupyter</span>
+                    </div>
+                </div>
+
+                <p class="tech-detail">
+                    pandas · numpy · matplotlib · scikit-learn · EDA
+                </p>
+            </div>
+
+            <div class="tech-group">
+                <h3>Bases de datos</h3>
+
+                <div class="tech-logos">
+                    <div class="tech-item">
+                        <img src="assets/logos/postgresql.svg" alt="PostgreSQL">
+                        <span>PostgreSQL</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="assets/logos/neo4j.svg" alt="Neo4j">
+                        <span>Neo4j</span>
+                    </div>
+                </div>
+
+                <p class="tech-detail">
+                    SQL · modelado relacional · grafos
+                </p>
+            </div>
+
+            <div class="tech-group">
+                <h3>Desarrollo y automatización</h3>
+
+                <div class="tech-logos">
+                    <div class="tech-item">
+                        <img src="assets/logos/nodejs.svg" alt="Node.js">
+                        <span>Node.js</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="assets/logos/git.svg" alt="Git">
+                        <span>Git</span>
+                    </div>
+                </div>
+
+                <p class="tech-detail">
+                    scripts · automatización · control de versiones
+                </p>
+            </div>
+
+            <div class="tech-group">
+                <h3>Visualización y reporting</h3>
+
+                <div class="tech-logos">
+                    <div class="tech-item">
+                        <img src="assets/logos/powerbi.svg" alt="Power BI">
+                        <span>Power BI</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="assets/logos/googlesheets.svg" alt="Google Workspace">
+                        <span>Google Workspace</span>
+                    </div>
+                </div>
+
+                <p class="tech-detail">
+                    dashboards · reportes · visualización de resultados
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- =====================================================
+        Portfolio
+    ===================================================== -->
+    <section class="portfolio" id="portfolio">
+        <div class="portfolio-container">
+
+            <!-- Título de sección -->
+            <div class="portfolio-intro">
+                <h2>Portfolio</h2>
+                <p>
+                    Proyectos personales, académicos y profesionales vinculados a
+                    ciencia de datos y desarrollo de software.
+                </p>
+            </div>
+
+            <!-- Proyecto 1 -->
+            <article class="project-card">
+                <h3>Ornithological Potential</h3>
+                <span class="project-status">Proyecto personal</span>
+
+                <p class="project-description">
+                    Aplicación para identificar los mejores sitios para observar aves
+                    a partir de registros descargados de iNaturalist y eBird. Procesa
+                    los datos y genera mapas con áreas de alto potencial.
+                </p>
+
+                <ul class="project-tech">
+                    <li>Python</li>
+                    <li>Jupyter</li>
+                    <li>Análisis de datos</li>
+                    <li>Visualización</li>
+                    <li>HTML</li>
+                </ul>
+
+                <div class="project-actions">
+                    <a href="https://github.com/pablo-jusim/ornithological_potential" target="_blank" class="btn">GitHub</a>
+                </div>
+            </article>
+
+            <!-- Proyecto 2 -->
+            <article class="project-card">
+                <h3>TDF Aprende</h3>
+                <span class="project-status">En desarrollo · Proyecto grupal</span>
+
+                <p class="project-description">
+                    Plataforma web orientada a la oferta de cursos adaptados a las
+                    necesidades de la provincia de Tierra del Fuego. Desarrollo
+                    realizado en el marco de la startup Inteligencia Fueguina.
+                </p>
+
+                <ul class="project-tech">
+                    <li>Python</li>
+                    <li>Backend</li>
+                    <li>Trabajo en equipo</li>
+                </ul>
+
+                <div class="project-actions">
+                    <span class="project-note">Repositorio privado (en desarrollo)</span>
+                </div>
+            </article>
+
+            <!-- Proyecto 3 -->
+            <article class="project-card">
+                <h3>Big Tools</h3>
+                <span class="project-status">Proyecto académico · Proyecto grupal</span>
+
+                <p class="project-description">
+                    Desarrollo de un chatbot para asistir a técnicos en la reparación
+                    de maquinaria, permitiendo realizar consultas rápidas a partir de
+                    la información contenida en manuales técnicos.
+                </p>
+
+                <ul class="project-tech">
+                    <li>Python</li>
+                    <li>Procesamiento de texto</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+
+                <div class="project-actions">
+                    <span class="project-note">Repositorio no disponible (confidencial)</span>
+                </div>
+            </article>
+
+            <!-- Proyecto 4 -->
+            <article class="project-card">
+                <h3>Clínica San Jorge</h3>
+                <span class="project-status">Proyecto académico · Proyecto grupal</span>
+
+                <p class="project-description">
+                    Análisis de indicadores vinculados a la efectividad laboral en una
+                    institución de salud. Desarrollo de visualizaciones y reportes para
+                    la toma de decisiones.
+                </p>
+
+                <ul class="project-tech">
+                    <li>Power BI</li>
+                    <li>Python</li>
+                    <li>Análisis de datos</li>
+                </ul>
+
+                <div class="project-actions">
+                    <span class="project-note">Repositorio no disponible (confidencial)</span>
+                </div>
+            </article>
+
+            <!-- Proyecto 5 -->
+            <article class="project-card">
+                <h3>Clasificador de reclamos</h3>
+                <span class="project-status">Proyecto académico · Proyecto grupal</span>
+
+                <p class="project-description">
+                    Desarrollo de un chatbot para clasificar reclamos ciudadanos
+                    mediante técnicas de procesamiento de lenguaje natural.
+                </p>
+
+                <ul class="project-tech">
+                    <li>Python</li>
+                    <li>NLP</li>
+                    <li>Clasificación de texto</li>
+                </ul>
+
+                <div class="project-actions">
+                    <span class="project-note">Repositorio no disponible</span>
+                </div>
+            </article>
+
+            <!-- Proyecto 6 -->
+            <article class="project-card">
+                <h3>Trovamérica Web</h3>
+                <span class="project-status">En desarrollo · Proyecto individual</span>
+
+                <p class="project-description">
+                    Sitio web desarrollado para un programa de radio, orientado a la
+                    publicación de contenidos e invitados.
+                </p>
+
+                <ul class="project-tech">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+
+                <div class="project-actions">
+                    <span class="project-note">Proyecto para cliente · Repositorio privado</span>
+                </div>
+            </article>
+
+            <!-- Proyecto 7 -->
+            <article class="project-card">
+                <h3>Biblioteca Alke</h3>
+                <span class="project-status">Proyecto académico · Proyecto grupal</span>
+
+                <p class="project-description">
+                    Desarrollo del backend de un sistema de préstamos online para una
+                    biblioteca, implementado en el marco de un curso de Node.js y SQL.
+                </p>
+
+                <ul class="project-tech">
+                    <li>Node.js</li>
+                    <li>SQL</li>
+                    <li>Backend</li>
+                </ul>
+
+                <div class="project-actions">
+                    <span class="project-note">Código no disponible</span>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+
+
 
 
 
 </body>
-
 </html>

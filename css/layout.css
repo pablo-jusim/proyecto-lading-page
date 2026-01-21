@@ -1,0 +1,155 @@
+/* =====================================================
+   Layout general de la página
+   Define estructura y distribución de secciones
+===================================================== */
+
+/* =====================================================
+   Header / Navegación principal
+===================================================== */
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+
+    width: 100%;
+    height: 70px;
+    padding: 15px 3%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.1) 0%,
+        rgba(0, 0, 0, 0.1) 33%,
+        rgba(0, 0, 0, 0.4) 100%
+    );
+
+    backdrop-filter: blur(4px);
+}
+
+
+.navlist {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+/* Checkbox auxiliar para menú mobile */
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon-action,
+#menu-icon {
+    display: none;
+}
+
+.section-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* =====================================================
+   Hero Section
+===================================================== */
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 80px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;   /* 🔑 clave */
+    gap: 2rem;
+
+    position: relative;
+}
+
+/* Padding horizontal general para secciones */
+section {
+    padding: 0 8%;
+}
+
+/* =====================================================
+   Contenido principal del hero
+===================================================== */
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* =====================================================
+   Imagen principal del hero
+===================================================== */
+.hero-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.borde-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* =====================================================
+   Sección About (CV narrativo)
+===================================================== */
+.about {
+    width: 100%;
+    padding: 100px 8%;
+}
+
+.about-container {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    display: grid;
+    gap: 60px;
+}
+
+/* =====================================================
+   Bloques internos del About
+===================================================== */
+.about-intro,
+.about-profile,
+.about-skills,
+.about-education {
+    display: grid;
+    gap: 20px;
+}
+
+.logo-wrapper {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.logo-wrapper.politecnico img {
+    filter: grayscale(100%);
+}
+
+.logo-wrapper.uba {
+    background-color: #f5f5f5;
+}
+
+
+

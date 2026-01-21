@@ -1,0 +1,356 @@
+/* =====================================================
+   Estilos de secciones
+   Hero · About · Tecnologías · Portfolio
+===================================================== */
+
+
+/* =====================================================
+   Hero Section – Fondo
+===================================================== */
+.hero {
+    background: linear-gradient(
+        245.59deg,
+        rgb(2, 20, 1) 0%,
+        rgb(7, 71, 7) 45%,
+        rgb(8, 81, 8) 75%
+    );
+}
+
+
+/* =====================================================
+   Hero – Tipografía
+===================================================== */
+.hero-text h5 {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.hero-text h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.hero-text h1 {
+    font-family: 'Tangerine', cursive;
+    font-size: 80px;
+    line-height: 1;
+    margin-bottom: 30px;
+}
+
+.hero-text p {
+    font-size: 80%;
+    line-height: 1.9;
+    margin-bottom: 40px;
+}
+
+
+/* =====================================================
+   Hero – Imagen principal
+===================================================== */
+.hero-img img {
+    width: 95%;
+    max-width: 400px;
+    border-radius: 50%;
+    clip-path: polygon(
+        40% 0%,
+        90% 0%,
+        70% 75%,
+        50% 100%,
+        10% 85%
+    );
+}
+
+.borde-img {
+    width: 425px;
+    margin: 10% 0 0 10%;
+    background-color: brown;
+    color: transparent;
+    border-radius: 50%;
+    clip-path: polygon(
+        40% 0%,
+        90% 0%,
+        70% 75%,
+        50% 100%,
+        10% 85%
+    );
+    transition: all 5s linear;
+}
+
+.borde-img:hover {
+    width: 460px;
+    opacity: 0.7;
+}
+
+
+/* =====================================================
+   About (CV narrativo)
+===================================================== */
+.about {
+    background-color: #0b0f0b;
+}
+
+.about-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+.about-intro h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.about-intro p {
+    max-width: 700px;
+    font-size: 95%;
+    line-height: 1.8;
+}
+
+.about h3 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.about p {
+    font-size: 90%;
+    line-height: 1.8;
+    color: #e6e6e6;
+}
+
+
+/* =====================================================
+   About – Listas
+===================================================== */
+.about ul {
+    display: grid;
+    gap: 10px;
+    padding-left: 20px;
+}
+
+.about li {
+    position: relative;
+    font-size: 90%;
+    line-height: 1.6;
+}
+
+.about li::before {
+    content: "–";
+    position: absolute;
+    left: -20px;
+    color: #7fa87f;
+}
+
+
+/* =====================================================
+   Tecnologías
+===================================================== */
+.technologies {
+    background-color: #0b0f0b;
+}
+
+.technologies-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-bottom: 120px;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 60px;
+    row-gap: 80px;
+}
+
+.technologies-intro {
+    grid-column: 1 / -1;
+    max-width: 900px;
+}
+
+.technologies-intro h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.technologies-intro p {
+    font-family: 'Inconsolata', monospace;
+    font-size: 95%;
+    line-height: 1.6;
+    color: #d0d0d0;
+}
+
+.tech-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tech-group h3 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.tech-logos {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    min-width: 80px;
+}
+
+.tech-item img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    filter: invert(1) grayscale(100%) brightness(0.9);
+    transition: all 0.3s ease;
+}
+
+.tech-item:hover img {
+    filter: invert(1) grayscale(0%) brightness(1);
+}
+
+.tech-item span {
+    font-size: 80%;
+    color: #cfcfcf;
+    text-align: center;
+}
+
+.tech-detail {
+    font-size: 85%;
+    color: #a8a8a8;
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   Portfolio
+===================================================== */
+.portfolio {
+    background-color: #0b0f0b;
+}
+
+.portfolio-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 60px;
+    row-gap: 80px;
+}
+
+.portfolio-container::before {
+    content: "";
+    position: absolute;
+
+    top: 200px;     /* 🔑 clave */
+    bottom: 20px;
+
+    left: 50%;
+    width: 1px;
+
+    background-color: rgba(118, 114, 114, 0.238);
+    transform: translateX(-50%);
+}
+
+
+
+
+.portfolio-intro {
+    grid-column: 1 / -1;
+    max-width: 900px;
+}
+
+.portfolio-intro h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.portfolio-intro p {
+    font-size: 95%;
+    line-height: 1.7;
+    color: #d0d0d0;
+}
+
+
+/* =====================================================
+   Project cards
+===================================================== */
+.project-card {
+    background-color: #111511;
+    padding: 24px;
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.project-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.project-status {
+    font-size: 80%;
+    color: #9aa89a;
+}
+
+.project-description {
+    font-size: 90%;
+    line-height: 1.6;
+    color: #d0d0d0;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.project-tech li {
+    font-size: 75%;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.project-actions {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.project-actions .btn {
+    font-size: 80%;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.project-actions .btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.project-note {
+    font-size: 75%;
+    color: #9aa89a;
+}

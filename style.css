@@ -1,130 +1,130 @@
-/* font-family: 'Tangerine'
-font-family: 'DM Mono' */
+/* =====================================================
+   Tipografías utilizadas
+   font-family: 'Tangerine'
+   font-family: 'DM Mono'
+   font-family: 'Inconsolata'
+===================================================== */
 
-/* Normalización: (reseteo de algunas características para no usar las default del navegador*/
+/* =====================================================
+   Reset / Normalización
+===================================================== */
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    /* El padding y border no afectan el ancho y alto del elemento */
+    /* Padding y borde no afectan el tamaño total del elemento */
+
     font-family: 'Inconsolata', monospace;
     list-style: none;
-    /* Saca los puntos y decoraciones de las listas*/
+    /* Elimina viñetas y estilos de listas */
     text-decoration: none;
-    /* Quita el subrayado de los enlaces*/
+    /* Elimina subrayado en enlaces */
     color: white;
 }
 
+/* =====================================================
+   Estilos base
+===================================================== */
 body {
     background-color: black;
-    /* TODO: Borrar cuando esté el fondo final */
-}
-
-header {
-    position: fixed;
-    /*El header queda fijo en el margen superior */
-    right: 0;
-    top: 0;
-    z-index: 100;
-    /* Valor alto para que el header que por encima de cualquier otra cosa */
-    width: 100%;
-    display: flex;
-    /* Para que los elementos se vean en línea */
-    align-items: center;
-    /* Centra verticalmente gracias al flex */
-    justify-content: space-between;
-    /* Separa los elementos */
-    padding: 15px 3%;
-    /* Eje vertical y horizontal en orden */
-    background-color: transparent;
-}
-
-.logo {
-    font-size: 30px;
-    font-weight: 800;
-    /* Grosor de las letras */
-}
-
-.navlist {
-    display: flex;
-    /* Los elementos quedan en línea */
-}
-
-.navlist a {
-    /* Se trabaja en los "a" (links) de los navlist */
-    margin-left: 60px;
-    /* Para separar cada link del otro */
-    font-size: 15px;
-    font-weight: 600;
-    border-bottom: 2px solid transparent;
-    /* Subrayado transparente */
-    transition: all .5s ease 0s;
-    /* Cada cambio de característica va a ser una transición de medio segundo de duración y sin delay */
-}
-
-.navlist a:hover {
-    /* hover hace cambio cuando se pasa el mouse por encima */
-    border-bottom: 2px solid white;
-    /* El subrayado blanco aparecerá al pasar el mouse por encima */
-}
-
-#menu-icon {
-    display: none;
-    /*  Solo quiero que aparezca con la página colapsada (en el celular) */
-}
-
-#menu-icon {
-    font-size: 35px;
-    z-index: 101;
-    /* Para que esté por encima de la barra del header */
-    cursor: pointer;
-    /* Para que el mouse se vuelva una mano al ponerlo sobre el menú-icon */
-}
-
-#menu-toggle {
-    display: none;
-    /* Para que no se vea el checkbox */
-}
-
-.menu-icon-action {
-    display: none;
-    /* Para que no sea clickeable */
-}
-
-.hero {
-    height: 100%;
-    width: 100%;
-    min-height: 100vh;
-    /* La altura mínima va a ser todo el alto visible de la pantalla */
-    background: linear-gradient(245.59deg, rgb(2, 20, 1) 0%, rgb(7, 71, 7) 45%, rgb(8, 81, 8) 75%);
-    /* Hace el fondo en gradiente; 245.59 es el angulo del degrade */
-    position: relative;
-    /* Posicion relativa al contenedor */
-    display: grid;
-    /* Para dividir al Hero en 2 columnas */
-    grid-template-columns: 1fr 1fr;
-    /* ambas columnas tienen el mismo ancho */
-    align-items: center;
-    /* alinear verticalmente */
-    gap: 2rem;
-    /* Espacio de 2rem entre ambas columnas */
+    /* TODO: eliminar cuando se defina el fondo final */
 }
 
 section {
     padding: 0 8%;
 }
 
+/* =====================================================
+   Header / Navegación
+===================================================== */
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    /* Mantiene el header por encima del resto */
+
+    width: 100%;
+    padding: 15px 3%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: transparent;
+}
+
+/* Logo */
+.logo {
+    font-size: 30px;
+    font-weight: 800;
+}
+
+/* Navegación */
+.navlist {
+    display: flex;
+}
+
+.navlist a {
+    margin-left: 60px;
+    font-size: 15px;
+    font-weight: 600;
+
+    border-bottom: 2px solid transparent;
+    transition: all 0.5s ease;
+}
+
+.navlist a:hover {
+    border-bottom: 2px solid white;
+}
+
+/* =====================================================
+   Menú responsive (mobile)
+===================================================== */
+#menu-toggle {
+    display: none;
+    /* Oculta el checkbox */
+}
+
+.menu-icon-action {
+    display: none;
+    /* Solo visible en mobile */
+}
+
+#menu-icon {
+    display: none;
+    font-size: 35px;
+    z-index: 101;
+    cursor: pointer;
+}
+
+/* =====================================================
+   Hero Section
+===================================================== */
+.hero {
+    width: 100%;
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+
+    position: relative;
+
+    background: linear-gradient(
+        245.59deg,
+        rgb(2, 20, 1) 0%,
+        rgb(7, 71, 7) 45%,
+        rgb(8, 81, 8) 75%
+    );
+}
+
+/* Texto del hero */
 .hero-text h5 {
     font-size: 14px;
     font-weight: 400;
     margin-bottom: 25px;
-}
-
-.hero-text h1 {
-    font-family: 'Tangerine', monospace;
-    font-size: 80px;
-    line-height: 1;
-    margin: 0 0 30px;
 }
 
 .hero-text h4 {
@@ -133,57 +133,42 @@ section {
     margin-bottom: 10px;
 }
 
-p {
+.hero-text h1 {
+    font-family: 'Tangerine', monospace;
+    font-size: 80px;
+    line-height: 1;
+    margin-bottom: 30px;
+}
+
+.hero-text p {
     font-size: 80%;
-    /* 80% del contenedor padre */
-    margin-bottom: 40px;
     line-height: 1.9;
-
+    margin-bottom: 40px;
 }
 
-.hero-img img {
-    width: 95%;
-    border-radius: 50%;
-    clip-path: polygon(40% 0%, 90% 00%, 70% 75%, 50% 100%, 10% 85%);
-    text-align: left;
-}
-
-.borde-img {
-    background-color: brown;
-    color: transparent;
-    width: 425px;
-    height: auto;
-    border-radius: 50%;
-    clip-path: polygon(40% 0%, 90% 00%, 70% 75%, 50% 100%, 10% 85%);
-    margin: 10% 0 0 10%;
-    transition: all 5s linear;
-    /* Hace a la transicion lineal */
-}
-
-.borde-img:hover {
-    width: 460px;
-    opacity: 0.7;
-}
-
+/* =====================================================
+   Botones / CTAs
+===================================================== */
 .hero-text a {
     display: inline-block;
-    /* inline pero permite dar ancho y alto */
-    background-color: rgb(3, 30, 1);
-    border: 1px solid transparent;
+
     padding: 15px;
-    line-height: 1.4;
     font-size: 14px;
     font-weight: 500;
+    line-height: 1.4;
+
     border-radius: 30px;
+    border: 1px solid transparent;
+    background-color: rgb(3, 30, 1);
+
     text-transform: uppercase;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
 }
 
 .hero-text a:hover {
     background-color: transparent;
     border: 1px solid white;
     transform: translateX(8px);
-    /* Se va a mover 8px hacia la derecha */
 }
 
 .hero-text a.proyectos {
@@ -197,6 +182,49 @@ p {
     margin-right: 5px;
 }
 
+/* =====================================================
+   Imagen principal
+===================================================== */
+.hero-img img {
+    width: 95%;
+    border-radius: 50%;
+
+    clip-path: polygon(
+        40% 0%,
+        90% 0%,
+        70% 75%,
+        50% 100%,
+        10% 85%
+    );
+}
+
+.borde-img {
+    width: 425px;
+    margin: 10% 0 0 10%;
+
+    background-color: brown;
+    color: transparent;
+
+    border-radius: 50%;
+    clip-path: polygon(
+        40% 0%,
+        90% 0%,
+        70% 75%,
+        50% 100%,
+        10% 85%
+    );
+
+    transition: all 5s linear;
+}
+
+.borde-img:hover {
+    width: 460px;
+    opacity: 0.7;
+}
+
+/* =====================================================
+   Íconos sociales
+===================================================== */
 .icons {
     position: absolute;
     top: 50vh;
@@ -206,11 +234,9 @@ p {
 
 .icons i {
     display: block;
-    /* Quedan ordenados verticalmente */
     margin: 26px 0;
     font-size: 24px;
     transition: all 0.5s ease;
-
 }
 
 .icons i:hover {
@@ -218,6 +244,9 @@ p {
     transform: translateY(-5px);
 }
 
+/* =====================================================
+   Indicador de scroll
+===================================================== */
 .scroll-down {
     position: absolute;
     bottom: 6%;
@@ -228,59 +257,57 @@ p {
     display: block;
     padding: 12px;
     font-size: 25px;
+
     background-color: #263d21;
     border-radius: 30px;
-    transition: all .5s ease;
+
+    transition: all 0.5s ease;
 }
 
 .scroll-down i:hover {
     transform: translateY(-5px);
 }
 
-/* Media queries para que la web sea responsive en tablet */
-@media (max-width:992px) {
+/* =====================================================
+   Responsive – Tablet
+===================================================== */
+@media (max-width: 992px) {
 
-    /* Cuando el tamaño de pantalla sea menor a 992px, se tomaran las configuraciones de aca */
     section {
         padding: 0 3%;
-        transition: .2s;
-    }
-
-    .hero-text {
-        padding-top: 0;
-    }
-
-    .borde-img {
-        text-align: center;
-        width: 90%;
-        margin: 10% 0 0 10%;
+        transition: 0.2s;
     }
 
     .hero-text p {
         font-size: 70%;
     }
 
-    .icons {
-        display: none;
-        /* Sacar los iconos si la pantalla es muy angosta */
+    .borde-img {
+        width: 90%;
+        margin: 10% 0 0 10%;
+        text-align: center;
     }
 
+    .icons,
     .scroll-down {
         display: none;
     }
-
 }
 
-/* Ahora para uso en celular */
-@media (max-width:600px) {
+/* =====================================================
+   Responsive – Mobile
+===================================================== */
+@media (max-width: 600px) {
 
-    /* Tiene que aparecer el botón de menú solo en celular */
-    .menu-icon-action {
+    /* Mostrar menú hamburguesa */
+    .menu-icon-action,
+    #menu-icon {
         display: block;
     }
 
-    #menu-icon {
-        display: block;
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 
     .hero-text {
@@ -288,39 +315,36 @@ p {
         padding-top: 100px;
     }
 
-    .borde-img{
+    .borde-img {
         margin: 0;
     }
 
-    .hero{
-        height: 100%;
-        gap: 1rem;
-        grid-template-columns: 1fr;
-    }
-
-    .navlist{
+    /* Menú desplegable */
+    .navlist {
         position: absolute;
         top: 100%;
         right: -100%;
+
         width: 150px;
         height: 180px;
+
         background-color: #042204ef;
-        
-        /* Para que se vea como columna */
+
         display: flex;
         flex-direction: column;
         align-items: center;
+
         padding: 30px 20px;
         transition: all 1s ease;
     }
 
-    .navlist a{
-        display: block;
+    .navlist a {
         margin: 7px 0;
+        display: block;
     }
 
-    /* Toda esta combinacion es para seleccionar el ul hermano */
-    #menu-toggle:checked + label.menu-icon-action + ul{
+    /* Mostrar menú cuando el checkbox está activo */
+    #menu-toggle:checked + label.menu-icon-action + ul {
         right: 0;
     }
 }
