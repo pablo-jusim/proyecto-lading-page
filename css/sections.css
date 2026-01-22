@@ -77,19 +77,24 @@
 /* =====================================================
    Hero – Imagen principal
 ===================================================== */
-.hero-img img {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 10%;
-    max-height: 300px;
-}
 
 .borde-img {
     width: 500px;
     margin: 10% 0 0 0;
     color: transparent;
+    
 }
 
+
+
+.hero-img img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10%;
+    max-height: 300px;
+    filter: contrast(0.95) brightness(0.95);
+    /* box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6); */
+}
 
 /* =====================================================
    Hero – Botones
@@ -271,12 +276,13 @@
     line-height: 1.6;
 }
 
-
 /* =====================================================
    Portfolio
 ===================================================== */
+
 .portfolio {
     background-color: #0b0f0b;
+    padding: 100px 8%;
 }
 
 .portfolio-container {
@@ -290,22 +296,24 @@
     row-gap: 80px;
 }
 
+/* Línea vertical central (hilo conductor) */
 .portfolio-container::before {
     content: "";
     position: absolute;
 
-    top: 200px;
-    bottom: 20px;
+    top: 260px;      /* baja para no invadir la intro */
+    bottom: 40px;
 
     left: 50%;
     width: 1px;
 
-    background-color: rgba(118, 114, 114, 0.238);
+    background-color: rgba(255, 255, 255, 0.08);
     transform: translateX(-50%);
 }
 
-
-
+/* =====================================================
+   Intro del portfolio
+===================================================== */
 
 .portfolio-intro {
     grid-column: 1 / -1;
@@ -324,10 +332,10 @@
     color: #d0d0d0;
 }
 
-
 /* =====================================================
-   Project cards
+   Project cards (base)
 ===================================================== */
+
 .project-card {
     background-color: #111511;
     padding: 24px;
@@ -340,26 +348,31 @@
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+/* Título */
 .project-card h3 {
     font-size: 20px;
     font-weight: 600;
 }
 
+/* Estado */
 .project-status {
     font-size: 80%;
     color: #9aa89a;
 }
 
+/* Descripción */
 .project-description {
     font-size: 90%;
     line-height: 1.6;
     color: #d0d0d0;
 }
 
+/* Tecnologías */
 .project-tech {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+
     list-style: none;
     padding: 0;
     margin: 0;
@@ -368,12 +381,15 @@
 .project-tech li {
     font-size: 75%;
     padding: 4px 10px;
+
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.08);
 }
 
+/* Acciones */
 .project-actions {
     margin-top: auto;
+
     display: flex;
     align-items: center;
     gap: 12px;
@@ -382,9 +398,11 @@
 .project-actions .btn {
     font-size: 80%;
     padding: 8px 16px;
+
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    transition: all 0.3s ease;
+
+    transition: background-color 0.3s ease;
 }
 
 .project-actions .btn:hover {
@@ -394,6 +412,38 @@
 .project-note {
     font-size: 75%;
     color: #9aa89a;
+}
+
+/* =====================================================
+   Project cards con imagen
+===================================================== */
+
+.project-with-image {
+    gap: 20px;
+}
+
+.project-with-image .project-image {
+    width: 100%;
+    height: 250px;
+
+    border-radius: 10px;
+    overflow: hidden;
+
+    background-color: #0b0f0b;
+}
+
+.project-with-image .project-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    filter: grayscale(40%) contrast(0.9) brightness(0.9);
+    transition: filter 0.3s ease;
+}
+
+.project-with-image:hover .project-image img {
+    filter: grayscale(0%) contrast(1) brightness(1);
 }
 
 

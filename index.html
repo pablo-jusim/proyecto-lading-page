@@ -84,7 +84,12 @@
                     Ver portfolio
                 </a>
 
-                <a href="#sobre-mi" class="btn secondary">
+                <a
+                href="assets/cv/Pablo_Jusim_CV.pdf"
+                class="btn secondary"
+                target="_blank"
+                rel="noopener noreferrer"
+                >
                     Descargar CV
                 </a>
             </div>
@@ -300,178 +305,247 @@
         </div>
     </section>
 
-    <!-- =====================================================
-        Portfolio
-    ===================================================== -->
-    <section class="portfolio">
-        <div class="portfolio-container">
+<!-- =====================================================
+     Portfolio
+===================================================== -->
+<section class="portfolio" id="portfolio">
+    <div class="portfolio-container">
 
-            <!-- Título de sección -->
-            <div class="portfolio-intro">
-                <h2 id="portfolio">Portfolio</h2>
-                <p>
-                    Proyectos personales, académicos y profesionales vinculados a
-                    ciencia de datos y desarrollo de software.
-                </p>
+        <!-- Intro -->
+        <div class="portfolio-intro">
+            <h2>Portfolio</h2>
+            <p>
+                Proyectos personales, académicos y profesionales vinculados a
+                ciencia de datos y desarrollo de software.
+            </p>
+        </div>
+
+        <!-- =================================================
+             Proyecto 1 – Ornithological Potential (con imagen)
+        ================================================== -->
+        <article class="project-card project-with-image">
+
+            <div class="project-image">
+                <img
+                    src="assets/portfolio/ornithological.png"
+                    alt="Mapa de áreas con alto potencial para observación de aves"
+                >
             </div>
 
-            <!-- Proyecto 1 -->
-            <article class="project-card">
-                <h3>Ornithological Potential</h3>
-                <span class="project-status">Proyecto personal</span>
+            <h3>Ornithological Potential</h3>
+            <span class="project-status">Proyecto personal</span>
 
-                <p class="project-description">
-                    Aplicación para identificar los mejores sitios para observar aves
-                    a partir de registros descargados de iNaturalist y eBird. Procesa
-                    los datos y genera mapas con áreas de alto potencial.
-                </p>
+            <p class="project-description">
+                Aplicación para identificar los mejores sitios para observar aves
+                a partir de registros descargados de iNaturalist y eBird. Procesa
+                los datos y genera mapas con áreas de alto potencial.
+            </p>
 
-                <ul class="project-tech">
-                    <li>Python</li>
-                    <li>Jupyter</li>
-                    <li>Análisis de datos</li>
-                    <li>Visualización</li>
-                    <li>HTML</li>
-                </ul>
+            <ul class="project-tech">
+                <li>Python</li>
+                <li>Jupyter</li>
+                <li>Análisis de datos</li>
+                <li>Visualización</li>
+                <li>HTML</li>
+            </ul>
 
-                <div class="project-actions">
-                    <a href="https://github.com/pablo-jusim/ornithological_potential" target="_blank" class="btn">GitHub</a>
-                </div>
-            </article>
+            <div class="project-actions">
+                <a
+                    href="https://github.com/pablo-jusim/ornithological_potential"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn"
+                >
+                    GitHub
+                </a>
+            </div>
+        </article>
 
-            <!-- Proyecto 2 -->
-            <article class="project-card">
-                <h3>TDF Aprende</h3>
-                <span class="project-status">En desarrollo · Proyecto grupal</span>
+        <!-- =================================================
+             Proyecto 2 – TDF Aprende (con imagen)
+        ================================================== -->
+        <article class="project-card project-with-image">
 
-                <p class="project-description">
-                    Plataforma web orientada a la oferta de cursos adaptados a las
-                    necesidades de la provincia de Tierra del Fuego. Desarrollo
-                    realizado en el marco de la startup Inteligencia Fueguina.
-                </p>
+            <div class="project-image">
+                <img
+                    src="assets/portfolio/tdf-aprende.png"
+                    alt="Mapa de áreas con alto potencial para observación de aves"
+                >
+            </div>
 
-                <ul class="project-tech">
-                    <li>Python</li>
-                    <li>Backend</li>
-                    <li>Trabajo en equipo</li>
-                </ul>
+            <h3>TDF Aprende</h3>
+            <span class="project-status">En desarrollo · Proyecto grupal</span>
 
-                <div class="project-actions">
-                    <span class="project-note">Repositorio privado (en desarrollo)</span>
-                </div>
-            </article>
+            <p class="project-description">
+                Plataforma web orientada a la oferta de cursos adaptados a las
+                necesidades de la provincia de Tierra del Fuego. Desarrollo
+                realizado en el marco de la startup Inteligencia Fueguina.
+            </p>
 
-            <!-- Proyecto 3 -->
-            <article class="project-card">
-                <h3>Big Tools</h3>
-                <span class="project-status">Proyecto académico · Proyecto grupal</span>
+            <ul class="project-tech">
+                <li>Python</li>
+                <li>Backend</li>
+                <li>Trabajo en equipo</li>
+            </ul>
 
-                <p class="project-description">
-                    Desarrollo de un chatbot para asistir a técnicos en la reparación
-                    de maquinaria, permitiendo realizar consultas rápidas a partir de
-                    la información contenida en manuales técnicos.
-                </p>
+            <div class="project-actions">
+                <span class="project-note">
+                    Repositorio privado (en desarrollo)
+                </span>
+            </div>
+        </article>
 
-                <ul class="project-tech">
-                    <li>Python</li>
-                    <li>Procesamiento de texto</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                </ul>
+        <!-- =================================================
+             Proyecto 3 – Big Tools (sin imagen)
+        ================================================== -->
+        <article class="project-card">
 
-                <div class="project-actions">
-                    <span class="project-note">Repositorio no disponible (confidencial)</span>
-                </div>
-            </article>
+            <h3>Big Tools</h3>
+            <span class="project-status">Proyecto académico · Proyecto grupal</span>
 
-            <!-- Proyecto 4 -->
-            <article class="project-card">
-                <h3>Clínica San Jorge</h3>
-                <span class="project-status">Proyecto académico · Proyecto grupal</span>
+            <p class="project-description">
+                Desarrollo de un chatbot para asistir a técnicos en la reparación
+                de maquinaria, permitiendo realizar consultas rápidas a partir de
+                la información contenida en manuales técnicos.
+            </p>
 
-                <p class="project-description">
-                    Análisis de indicadores vinculados a la efectividad laboral en una
-                    institución de salud. Desarrollo de visualizaciones y reportes para
-                    la toma de decisiones.
-                </p>
+            <ul class="project-tech">
+                <li>Python</li>
+                <li>Procesamiento de texto</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
 
-                <ul class="project-tech">
-                    <li>Power BI</li>
-                    <li>Python</li>
-                    <li>Análisis de datos</li>
-                </ul>
+            <div class="project-actions">
+                <span class="project-note">
+                    Repositorio no disponible (confidencial)
+                </span>
+            </div>
+        </article>
 
-                <div class="project-actions">
-                    <span class="project-note">Repositorio no disponible (confidencial)</span>
-                </div>
-            </article>
+        <!-- =================================================
+             Proyecto 4 – Clínica San Jorge (sin imagen)
+        ================================================== -->
+        <article class="project-card">
 
-            <!-- Proyecto 5 -->
-            <article class="project-card">
-                <h3>Clasificador de reclamos</h3>
-                <span class="project-status">Proyecto académico · Proyecto grupal</span>
+            <h3>Clínica San Jorge</h3>
+            <span class="project-status">Proyecto académico · Proyecto grupal</span>
 
-                <p class="project-description">
-                    Desarrollo de un chatbot para clasificar reclamos ciudadanos
-                    mediante técnicas de procesamiento de lenguaje natural.
-                </p>
+            <p class="project-description">
+                Análisis de indicadores vinculados a la efectividad laboral en una
+                institución de salud. Desarrollo de visualizaciones y reportes para
+                la toma de decisiones.
+            </p>
 
-                <ul class="project-tech">
-                    <li>Python</li>
-                    <li>NLP</li>
-                    <li>Clasificación de texto</li>
-                </ul>
+            <ul class="project-tech">
+                <li>Power BI</li>
+                <li>Python</li>
+                <li>Análisis de datos</li>
+            </ul>
 
-                <div class="project-actions">
-                    <span class="project-note">Repositorio no disponible</span>
-                </div>
-            </article>
+            <div class="project-actions">
+                <span class="project-note">
+                    Repositorio no disponible (confidencial)
+                </span>
+            </div>
+        </article>
 
-            <!-- Proyecto 6 -->
-            <article class="project-card">
-                <h3>Trovamérica Web</h3>
-                <span class="project-status">En desarrollo · Proyecto individual</span>
+        <!-- =================================================
+             Proyecto 5 – Clasificador de reclamos (con imagen)
+        ================================================== -->
+        <article class="project-card project-with-image">
 
-                <p class="project-description">
-                    Sitio web desarrollado para un programa de radio, orientado a la
-                    publicación de contenidos e invitados.
-                </p>
+            <div class="project-image">
+                <img
+                    src="assets/portfolio/clasificador.jpg"
+                    alt="Clasificación automática de reclamos ciudadanos mediante NLP"
+                >
+            </div>
 
-                <ul class="project-tech">
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                </ul>
+            <h3>Clasificador de reclamos</h3>
+            <span class="project-status">Proyecto académico · Proyecto grupal</span>
 
-                <div class="project-actions">
-                    <span class="project-note">Proyecto para cliente · Repositorio privado</span>
-                </div>
-            </article>
+            <p class="project-description">
+                Desarrollo de un chatbot para clasificar reclamos ciudadanos
+                mediante técnicas de procesamiento de lenguaje natural.
+            </p>
 
-            <!-- Proyecto 7 -->
-            <article class="project-card">
-                <h3>Biblioteca Alke</h3>
-                <span class="project-status">Proyecto académico · Proyecto grupal</span>
+            <ul class="project-tech">
+                <li>Python</li>
+                <li>NLP</li>
+                <li>Clasificación de texto</li>
+            </ul>
 
-                <p class="project-description">
-                    Desarrollo del backend de un sistema de préstamos online para una
-                    biblioteca, implementado en el marco de un curso de Node.js y SQL.
-                </p>
+            <div class="project-actions">
+                <span class="project-note">
+                    Repositorio no disponible
+                </span>
+            </div>
+        </article>
 
-                <ul class="project-tech">
-                    <li>Node.js</li>
-                    <li>SQL</li>
-                    <li>Backend</li>
-                </ul>
+        <!-- =================================================
+             Proyecto 6 – Trovamérica Web (con imagen)
+        ================================================== -->
+        <article class="project-card project-with-image">
 
-                <div class="project-actions">
-                    <span class="project-note">Código no disponible</span>
-                </div>
-            </article>
+            <div class="project-image">
+                <img
+                    src="assets/portfolio/trovamerica.jpg"
+                    alt="Sitio web Trovamérica para programa de radio"
+                >
+            </div>
 
-        </div>
-    </section>
+            <h3>Trovamérica Web</h3>
+            <span class="project-status">En desarrollo · Proyecto individual</span>
+
+            <p class="project-description">
+                Sitio web desarrollado para un programa de radio, orientado a la
+                publicación de contenidos e invitados.
+            </p>
+
+            <ul class="project-tech">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+
+            <div class="project-actions">
+                <span class="project-note">
+                    Proyecto para cliente · Repositorio privado
+                </span>
+            </div>
+        </article>
+
+        <!-- =================================================
+             Proyecto 7 – Biblioteca Alke (sin imagen)
+        ================================================== -->
+        <article class="project-card">
+
+            <h3>Biblioteca Alke</h3>
+            <span class="project-status">Proyecto académico · Proyecto grupal</span>
+
+            <p class="project-description">
+                Desarrollo del backend de un sistema de préstamos online para una
+                biblioteca, implementado en el marco de un curso de Node.js y SQL.
+            </p>
+
+            <ul class="project-tech">
+                <li>Node.js</li>
+                <li>SQL</li>
+                <li>Backend</li>
+            </ul>
+
+            <div class="project-actions">
+                <span class="project-note">
+                    Código no disponible
+                </span>
+            </div>
+        </article>
+
+    </div>
+</section>
+
 
 <!-- =====================================================
      Contacto
