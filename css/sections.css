@@ -10,9 +10,9 @@
 .hero {
     background: linear-gradient(
         245.59deg,
-        rgb(2, 20, 1) 0%,
-        rgb(7, 71, 7) 45%,
-        rgb(8, 81, 8) 75%
+        rgb(201, 201, 201) 0%,
+        rgb(142, 142, 142) 45%,
+        rgb(48, 48, 48) 75%
     );
 }
 
@@ -20,6 +20,14 @@
 /* =====================================================
    Hero – Tipografía
 ===================================================== */
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 38px;
+    max-width: 1500px;
+}
+
 .hero-text h5 {
     font-size: 14px;
     font-weight: 400;
@@ -33,55 +41,83 @@
 }
 
 .hero-text h1 {
-    font-family: 'Tangerine', cursive;
-    font-size: 80px;
-    line-height: 1;
-    margin-bottom: 30px;
+    /* max-width: 1000px; */
+    font-family: 'Inconsolata', monospace;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.25;
+    margin-bottom: 16px;
+}
+
+.hero-line-1 {
+    white-space: nowrap;
+}
+
+
+.hero-subtitle {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #9fb39f;
+    margin-top: 15px;
+    margin-bottom: 40px;
 }
 
 .hero-text p {
-    font-size: 80%;
-    line-height: 1.9;
-    margin-bottom: 40px;
+    font-size: 95%;
+    line-height: 1.7;
+    max-width: 520px;
+    margin-bottom: 32px;
+    color: #e0e0e0;
 }
+
 
 
 /* =====================================================
    Hero – Imagen principal
 ===================================================== */
 .hero-img img {
-    width: 95%;
+    width: 100%;
     max-width: 400px;
-    border-radius: 50%;
-    clip-path: polygon(
-        40% 0%,
-        90% 0%,
-        70% 75%,
-        50% 100%,
-        10% 85%
-    );
+    border-radius: 10%;
+    max-height: 300px;
 }
 
 .borde-img {
-    width: 425px;
-    margin: 10% 0 0 10%;
-    background-color: brown;
+    width: 500px;
+    margin: 10% 0 0 0;
     color: transparent;
-    border-radius: 50%;
-    clip-path: polygon(
-        40% 0%,
-        90% 0%,
-        70% 75%,
-        50% 100%,
-        10% 85%
-    );
-    transition: all 5s linear;
 }
 
-.borde-img:hover {
-    width: 460px;
-    opacity: 0.7;
+
+/* =====================================================
+   Hero – Botones
+===================================================== */
+
+.hero-actions {
+    display: flex;
+    gap: 16px;
+    align-items: center;
 }
+
+.btn.primary {
+    background-color: rgb(3, 30, 1);
+    border: 1px solid transparent;
+}
+
+.btn.secondary {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.btn.primary:hover,
+.btn.secondary:hover {
+    background-color: transparent;
+    border-color: white;
+    transform: translateX(6px);
+}
+
 
 
 /* =====================================================
@@ -150,6 +186,11 @@
 .technologies {
     background-color: #0b0f0b;
 }
+
+.technologies h2 {
+    scroll-margin-top: 90px;
+}
+
 
 .technologies-container {
     max-width: 1100px;
@@ -253,7 +294,7 @@
     content: "";
     position: absolute;
 
-    top: 200px;     /* 🔑 clave */
+    top: 200px;
     bottom: 20px;
 
     left: 50%;
@@ -353,4 +394,146 @@
 .project-note {
     font-size: 75%;
     color: #9aa89a;
+}
+
+
+/* =====================================================
+   Contacto
+===================================================== */
+.contact {
+    background-color: #0b0f0b;
+}
+
+.contact-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-top: 240px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+
+/* =====================================================
+   Contacto – Intro
+===================================================== */
+.contact-intro {
+    max-width: 500px;
+}
+
+.contact-intro h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.contact-intro p {
+    font-size: 95%;
+    line-height: 1.7;
+    color: #d0d0d0;
+}
+
+
+/* =====================================================
+   Formulario
+===================================================== */
+.contact-form {
+    display: grid;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-size: 80%;
+    color: #b8b8b8;
+}
+
+
+/* Inputs */
+.contact-form input,
+.contact-form textarea {
+    background-color: #111511;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    padding: 10px 12px;
+    border-radius: 6px;
+
+    font-family: inherit;
+    font-size: 90%;
+    color: white;
+
+    resize: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #7fa87f;
+}
+
+
+/* Botón */
+
+.btn {
+    color: #b3b3b3;
+}
+
+.btn.btn:hover {
+    color: #534c4cd4;
+}
+
+.contact-form .btn {
+    align-self: flex-start;
+    margin-top: 10px;
+
+    padding: 10px 22px;
+    font-size: 80%;
+    border-radius: 20px;
+
+    border: 1px solid rgba(119, 119, 119, 0.25);
+    background-color: transparent;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-form .btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+/* =====================================================
+   Links secundarios
+===================================================== */
+.contact-links {
+    grid-column: 1 / -1;
+
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+
+    margin-top: 60px;
+    font-size: 85%;
+}
+
+.contact-links a {
+    color: #9aa89a;
+}
+
+.contact-links a:hover {
+    color: white;
+}
+
+
+/* =====================================================
+   Utilidades
+===================================================== */
+.hidden {
+    display: none;
 }

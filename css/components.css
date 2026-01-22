@@ -83,7 +83,7 @@
    Íconos sociales
 ===================================================== */
 .icons {
-    position: absolute;
+    position: fixed;
     top: 50vh;
     padding: 0 3%;
     transform: translateY(-50%);

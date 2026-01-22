@@ -55,27 +55,43 @@
     </header>
 
     <!-- =====================================================
-         Hero Section
-    ====================================================== -->
+     Hero Section
+    ===================================================== -->
     <section class="hero">
 
         <div class="hero-text">
-            <h5>Biólogo</h5>
-            <h4>Científico de datos</h4>
-            <h1>Pablo Jusim</h1>
 
+            <!-- Mensaje principal -->
+            <h1>
+                <span class="hero-line-1">Analista de datos con base científica</span><br>
+                <span class="hero-line-2">y enfoque en soluciones funcionales</span>
+            </h1>
+
+            <!-- Subtítulo / stack -->
+            <h4 class="hero-subtitle">
+                Python · Análisis de datos · Backend · Visualización
+            </h4>
+
+            <!-- Descripción breve -->
             <p>
-                Análisis de datos personalizados.<br>
-                Aprendamos Python y organicemos tus datos
+                Transformo datos reales en herramientas útiles para la toma de decisiones,
+                combinando análisis riguroso y desarrollo práctico.
             </p>
 
-            <a href="#sobre-mi">CV</a>
-            <a href="#" class="proyectos">
-                <i class="ri-github-fill"></i>
-                Mirá mis proyectos
-            </a>
+            <!-- Call to actions -->
+            <div class="hero-actions">
+                <a href="#portfolio" class="btn primary">
+                    Ver portfolio
+                </a>
+
+                <a href="#sobre-mi" class="btn secondary">
+                    Descargar CV
+                </a>
+            </div>
+
         </div>
 
+        <!-- Imagen -->
         <div class="borde-img">
             <div class="hero-img">
                 <img src="/assets/imgs/foto 3.jpg" alt="Pablo Jusim foto">
@@ -84,15 +100,15 @@
 
         <!-- Redes sociales -->
         <div class="icons">
-            <a href="https://www.linkedin.com/in/pablo-jusim-84596051">
+            <a href="https://www.linkedin.com/in/pablo-jusim-84596051" target="_blank" rel="noopener">
                 <i class="ri-linkedin-box-fill"></i>
             </a>
-            <a href="https://github.com/pablo-jusim">
+            <a href="https://github.com/pablo-jusim" target="_blank" rel="noopener">
                 <i class="ri-github-fill"></i>
             </a>
         </div>
 
-        <!-- Indicador de scroll -->
+        <!-- Scroll -->
         <div class="scroll-down">
             <a href="#sobre-mi">
                 <i class="ri-arrow-down-s-fill"></i>
@@ -100,6 +116,7 @@
         </div>
 
     </section>
+
 
     <!-- =====================================================
          Sobre mí
@@ -189,11 +206,11 @@
     <!-- =====================================================
          Tecnologías
     ====================================================== -->
-    <section class="technologies" id="tecnologias">
+    <section class="technologies">
         <div class="technologies-container">
 
             <div class="technologies-intro">
-                <h2>Tecnologías</h2>
+                <h2 id="tecnologias">Tecnologías</h2>
                 <p>
                     Herramientas y lenguajes que utilizo habitualmente para análisis de datos, desarrollo y
                     visualización.
@@ -286,12 +303,12 @@
     <!-- =====================================================
         Portfolio
     ===================================================== -->
-    <section class="portfolio" id="portfolio">
+    <section class="portfolio">
         <div class="portfolio-container">
 
             <!-- Título de sección -->
             <div class="portfolio-intro">
-                <h2>Portfolio</h2>
+                <h2 id="portfolio">Portfolio</h2>
                 <p>
                     Proyectos personales, académicos y profesionales vinculados a
                     ciencia de datos y desarrollo de software.
@@ -456,6 +473,98 @@
         </div>
     </section>
 
+<!-- =====================================================
+     Contacto
+===================================================== -->
+<section class="contact" id="contacto">
+    <div class="contact-container">
+
+        <!-- Intro -->
+        <div class="contact-intro">
+            <h2>Contacto</h2>
+            <p>
+                Si querés contactarme por una propuesta laboral, colaboración
+                o consulta, podés hacerlo desde el formulario.
+            </p>
+        </div>
+
+        <!-- Formulario Netlify -->
+        <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            class="contact-form"
+        >
+
+            <!-- Campo oculto requerido por Netlify -->
+            <input type="hidden" name="form-name" value="contact">
+
+            <!-- Honeypot anti-spam -->
+            <p class="hidden">
+                <label>
+                    No completar si sos humano:
+                    <input name="bot-field">
+                </label>
+            </p>
+
+            <div class="form-group">
+                <label for="name">Nombre</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="message">Mensaje</label>
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    required
+                ></textarea>
+            </div>
+
+            <button type="submit" class="btn">
+                Enviar mensaje
+            </button>
+
+        </form>
+
+        <!-- Links secundarios -->
+        <div class="contact-links">
+            <a
+                href="https://www.linkedin.com/in/pablo-jusim-84596051"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                LinkedIn
+            </a>
+            <span>·</span>
+            <a
+                href="https://github.com/pablo-jusim"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                GitHub
+            </a>
+        </div>
+
+    </div>
+</section>
 
 
 
