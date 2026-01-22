@@ -57,6 +57,10 @@ h2 {
     scroll-margin-top: 90px;
 }
 
+/* Padding horizontal general para secciones */
+section {
+    padding: 100px 8%;
+}
 
 /* =====================================================
    Hero Section
@@ -64,20 +68,17 @@ h2 {
 .hero {
     width: 100%;
     min-height: 100vh;
-    padding-top: 130px;
+    padding: 130px 8% 0;
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 350px);
     align-items: start;
     gap: 2rem;
 
     position: relative;
 }
 
-/* Padding horizontal general para secciones */
-section {
-    padding: 0 8%;
-}
+
 
 /* =====================================================
    Contenido principal del hero
